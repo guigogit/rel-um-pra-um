@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cliente extends Model
 {
-    use HasFactory;
+    public function endereco() {
+        return $this->hasONe('App\Models\Endereco');
+    }
+//use HasFactory;
 }
